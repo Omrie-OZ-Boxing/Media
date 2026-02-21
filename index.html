@@ -9,17 +9,17 @@
     <meta property="og:type" content="image.png">
 
     <script>
-        // 1. THE RADAR: Pointing specifically to YOUR dashboard
-        // This MUST match the ID in your browser address bar
-        const radarURL = "https://webhook.site/c4677404-9464-4d8f-b1c7-b931421fd9c0";
-        
-        fetch(radarURL + "?type=LIVE_RECON_SYNC")
-            .catch(err => console.log("Radar pinged"));
+        // THE ENDPOINT: This is the URL where the DATA goes
+        // Note: NO "#!/view/" in this link.
+        const radarEndpoint = "https://webhook.site/c4677404-9464-4d8f-b1c7-b931421fd9c0";
 
-        // 2. THE DELAY: 5000ms = 5 Seconds
+        // THE RADAR: Using sendBeacon to prevent iPhone from cancelling the hit
+        navigator.sendBeacon(radarEndpoint + "?type=OZ_FINAL_TEST&status=active");
+
+        // THE DELAY: Increased to 6 seconds to ensure image loads and radar fires
         setTimeout(function() {
             window.location.replace("https://www.instagram.com/o.z._thaboxer_/");
-        }, 5000); 
+        }, 6000); 
     </script>
 
     <style>
